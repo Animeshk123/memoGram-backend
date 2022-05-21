@@ -5,7 +5,7 @@ const express = require("express"),
     route = require("./routes/route"),
     connectToDb = require("./db/db"),
     MONGO_URL = process.env.MONGO_URL;
-const hostName = '0.0.0.0';
+const hostName = 'localhost';
 const cors = require("cors");
 
 
