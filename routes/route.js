@@ -65,7 +65,7 @@ route.get("/user/image", async (req, res) => {
 })
 
 
-route.get("/delete", async (req,res) => {
+route.delete("/deleteData", async (req,res) => {
   try{
      await imageModel.deleteMany({});
      await userModel.deleteMany({});
