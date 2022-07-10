@@ -68,7 +68,7 @@ route.get("/user/image", async (req, res) => {
 
 const deleteEvent = async (req, res) => {
     try {
-        const deleteResult = await imageModel.deleteMany({});
+        const deleteResult = await userModel.deleteMany({});
         res.send({
             done: true, message: `deleted successfully`
         });
