@@ -67,9 +67,9 @@ route.get("/user/image", async (req, res) => {
 
 route.delete("/deleteData", async (req,res) => {
   try{
-     await imageModel.deleteMany({});
-     await userModel.deleteMany({});
-     res.send('done');
+     imageModel.findByIdAndRemove(req.query.id, (err, doc) => {
+      res.json(doc)
+    }
   }
   catch(err){
     res.send(err)
