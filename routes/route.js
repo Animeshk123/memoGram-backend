@@ -64,18 +64,6 @@ route.get("/user/image", async (req, res) => {
     }
 })
 
-route.get("/delete",async (req,res) => {
-   try{
-      imageModel.deleteMany({},(err) => {
-           userModel.deleteMany({},(err) => {
-           res.send('done');
-        }
-      }
-   }
-   catch(err){
-     res.send(err);
-   }
-})
 
 
 module.exports = route;
