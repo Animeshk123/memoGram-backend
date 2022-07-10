@@ -65,17 +65,6 @@ route.get("/user/image", async (req, res) => {
 })
 
 
-route.get("/deleteData", async (req,res) => {
-  try{
-     imageModel.findByIdAndRemove(req.query.id, (err, doc) => {
-      res.json(doc)
-    }
-  }
-  catch(err){
-    res.send(err)
-  }
-})
-
 
 
 module.exports = route;
